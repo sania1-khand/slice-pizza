@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Slice of Heaven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Slice of Heaven</a>
+                <ul class="nav-links">
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="orderonline.html" class="active">Order Online</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Hero -->
+    <section class="order-hero">
+        <div class="container">
+            <h1>Order Online</h1>
+            <p>Delicious pizza delivered to your door or ready for pickup</p>
+        </div>
+    </section>
+
+    <!-- Order Process -->
+    <section class="order-process">
+        <div class="container">
+            <div class="process-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Your Order</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Delivery Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Payment</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Confirmation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Content -->
+    <section class="order-content">
+        <div class="container">
+            <div class="order-grid">
+                <!-- Order Form -->
+                <div class="order-form">
+                    <h2>Your Order</h2>
+                    
+                    <!-- Delivery Method -->
+                    <div class="form-section">
+                        <h3>Delivery Method</h3>
+                        <div class="delivery-options">
+                            <div class="delivery-option">
+                                <input type="radio" id="delivery" name="delivery-method" checked>
+                                <label for="delivery">
+                                    <i class="fas fa-truck"></i>
+                                    <span>Delivery</span>
+                                </label>
+                            </div>
+                            <div class="delivery-option">
+                                <input type="radio" id="pickup" name="delivery-method">
+                                <label for="pickup">
+                                    <i class="fas fa-store"></i>
+                                    <span>Pickup</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Time -->
+                    <div class="form-section">
+                        <h3>When would you like your order?</h3>
+                        <div class="delivery-time-options">
+                            <div class="time-option">
+                                <input type="radio" id="asap" name="delivery-time" checked>
+                                <label for="asap">ASAP (30-45 min)</label>
+                            </div>
+                            <div class="time-option">
+                                <input type="radio" id="later" name="delivery-time">
+                                <label for="later">Schedule for later</label>
+                            </div>
+                        </div>
+                        <div class="schedule-time" id="schedule-time" style="display: none;">
+                            <label for="delivery-date">Date</label>
+                            <input type="date" id="delivery-date">
+                            <label for="delivery-hour">Time</label>
+                            <select id="delivery-hour">
+                                <option value="11">11:00 AM</option>
+                                <option value="11.5">11:30 AM</option>
+                                <option value="12">12:00 PM</option>
+                                <!-- More time options would be added here -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Order Items -->
+                    <div class="form-section">
+                        <h3>Your Items</h3>
+                        <div class="order-items">
+                            <!-- Sample items - in a real app these would be dynamic -->
+                            <div class="order-item">
+                                <div class="item-info">
+                                    <h4>Margherita Pizza</h4>
+                                    <p>Classic pizza with tomato sauce, fresh mozzarella, and basil</p>
+                                    <div class="item-options">
+                                        <div class="option">
+                                            <span>Crust:</span> Classic
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-controls">
+                                    <div class="item-quantity">
+                                        <button class="quantity-btn minus">-</button>
+                                        <span class="quantity">1</span>
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <div class="item-price">$12.99</div>
+                                    <button class="remove-item"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="order-item">
+                                <div class="item-info">
+                                    <h4>Spicy Wings</h4>
+                                    <p>Crispy chicken wings with your choice of sauce</p>
+                                    <div class="item-options">
+                                        <div class="option">
+                                            <span>Sauce:</span> Hot Buffalo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-controls">
+                                    <div class="item-quantity">
+                                        <button class="quantity-btn minus">-</button>
+                                        <span class="quantity">1</span>
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <div class="item-price">$9.99</div>
+                                    <button class="remove-item"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline add-more-items">
+                            <i class="fas fa-plus"></i> Add More Items
+                        </button>
+                    </div>
+
+                    <!-- Special Instructions -->
+                    <div class="form-section">
+                        <h3>Special Instructions</h3>
+                        <textarea id="special-instructions" placeholder="Any special requests or delivery instructions?"></textarea>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button class="btn btn-secondary">Back to Menu</button>
+                        <button class="btn btn-primary continue-btn">Continue to Delivery</button>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-content">
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span class="item-name">Margherita Pizza x1</span>
+                                <span class="item-price">$12.99</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="item-name">Spicy Wings x1</span>
+                                <span class="item-price">$9.99</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span>$22.98</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee</span>
+                                <span>$2.99</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (8%)</span>
+                                <span>$1.84</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>$27.81</span>
+                            </div>
+                        </div>
+
+                        <div class="promo-code">
+                            <input type="text" placeholder="Promo Code">
+                            <button class="btn btn-small">Apply</button>
+                        </div>
+
+                        <div class="loyalty-points">
+                            <h3>Loyalty Points</h3>
+                            <p>You have 150 points available</p>
+                            <div class="points-option">
+                                <input type="checkbox" id="use-points">
+                                <label for="use-points">Use 100 points for $5.00 off</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Slice of Heaven</h3>
+                    <p>Taste the best pizza in town made with love and the finest ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Pizza Street, Foodville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@sliceofheaven.com</li>
+                        <li><i class="fas fa-clock"></i> Open daily 11am-11pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Slice of Heaven. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Delivery Time Toggle
+    const asapOption = document.getElementById('asap');
+    const laterOption = document.getElementById('later');
+    const scheduleTime = document.getElementById('schedule-time');
+    
+    laterOption.addEventListener('change', function() {
+        if (this.checked) {
+            scheduleTime.style.display = 'grid';
+        }
+    });
+    
+    asapOption.addEventListener('change', function() {
+        if (this.checked) {
+            scheduleTime.style.display = 'none';
+        }
+    });
+    
+    // Set minimum date for delivery (today)
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('delivery-date').min = today;
+    
+    // Quantity Controls
+    document.querySelectorAll('.quantity-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const quantityElement = this.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantityElement.textContent);
+            
+            if (this.classList.contains('plus')) {
+                quantity++;
+            } else if (this.classList.contains('minus') && quantity > 1) {
+                quantity--;
+            }
+            
+            quantityElement.textContent = quantity;
+            updateOrderSummary();
+        });
+    });
+    
+    // Remove Item
+    document.querySelectorAll('.remove-item').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.closest('.order-item').remove();
+            updateOrderSummary();
+        });
+    });
+    
+    // Update Order Summary
+    function updateOrderSummary() {
+        // In a real implementation, this would calculate totals based on items
+        // For this demo, we'll keep static values
+    }
+    
+    // Delivery Method Change
+    document.querySelectorAll('input[name="delivery-method"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.id === 'delivery') {
+                // Update summary for delivery
+                document.querySelector('.summary-totals .summary-row:nth-child(2) span:last-child').textContent = '$2.99';
+            } else {
+                // Update summary for pickup
+                document.querySelector('.summary-totals .summary-row:nth-child(2) span:last-child').textContent = '$0.00';
+            }
+            updateOrderSummary();
+        });
+    });
+    
+    // Continue Button
+    document.querySelector('.continue-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        // In a real implementation, this would validate the form and proceed to next step
+        alert('Proceeding to delivery information step!');
+    });
+    
+    // Add More Items Button
+    document.querySelector('.add-more-items').addEventListener('click', function(e) {
+        e.preventDefault();
+        // In a real implementation, this would open the menu
+        window.location.href = 'menu.html';
+    });
+});
+    </script>
+</body>
+</html>

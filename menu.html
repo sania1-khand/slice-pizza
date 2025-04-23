@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Slice of Heaven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Slice of Heaven</a>
+                <ul class="nav-links">
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="orderonline.html">Order Online</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="container">
+            <h1>Our Delicious Menu</h1>
+            <p>Made with love and the freshest ingredients</p>
+        </div>
+    </section>
+
+    <!-- Menu Filter -->
+    <section class="menu-filter">
+        <div class="container">
+            <div class="filter-options">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="pizza">Pizzas</button>
+                <button class="filter-btn" data-category="appetizer">Appetizers</button>
+                <button class="filter-btn" data-category="pasta">Pastas</button>
+                <button class="filter-btn" data-category="salad">Salads</button>
+                <button class="filter-btn" data-category="dessert">Desserts</button>
+                <button class="filter-btn" data-category="drink">Drinks</button>
+            </div>
+            <div class="dietary-filters">
+                <div class="filter-tag" data-filter="vegetarian">
+                    <input type="checkbox" id="vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                </div>
+                <div class="filter-tag" data-filter="vegan">
+                    <input type="checkbox" id="vegan">
+                    <label for="vegan">Vegan</label>
+                </div>
+                <div class="filter-tag" data-filter="gluten-free">
+                    <input type="checkbox" id="gluten-free">
+                    <label for="gluten-free">Gluten-Free</label>
+                </div>
+                <div class="filter-tag" data-filter="spicy">
+                    <input type="checkbox" id="spicy">
+                    <label for="spicy">Spicy</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <div class="container">
+            <!-- Pizza Category -->
+            <div class="menu-category" id="pizza">
+                <h2 class="category-title">Pizzas</h2>
+                <div class="items-grid">
+                    <!-- Margherita Pizza -->
+                    <div class="menu-item" data-category="pizza" data-vegetarian="true" data-gluten-free="false" data-spicy="false">
+                        <div class="item-image">
+                            <img src="margherita.jpg" alt="Margherita Pizza">
+                            <div class="item-badge vegetarian">Vegetarian</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Margherita</h3>
+                            <p>Classic pizza with tomato sauce, fresh mozzarella, and basil</p>
+                            <div class="item-price">$12.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Pepperoni Pizza -->
+                    <div class="menu-item" data-category="pizza" data-vegetarian="false" data-gluten-free="false" data-spicy="false">
+                        <div class="item-image">
+                            <img src="popperoni.jpg" alt="Pepperoni Pizza">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pepperoni</h3>
+                            <p>Tomato sauce, mozzarella, and generous pepperoni toppings</p>
+                            <div class="item-price">$14.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Veggie Delight -->
+                    <div class="menu-item" data-category="pizza" data-vegetarian="true" data-vegan="true" data-gluten-free="true" data-spicy="false">
+                        <div class="item-image">
+                            <img src="veggie.jpg" alt="Veggie Pizza">
+                            <div class="item-badge vegetarian">Vegetarian</div>
+                            <div class="item-badge vegan">Vegan</div>
+                            <div class="item-badge gluten-free">Gluten-Free</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Veggie Delight</h3>
+                            <p>Bell peppers, mushrooms, onions, olives, and vegan cheese</p>
+                            <div class="item-price">$15.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Spicy Hawaiian -->
+                    <div class="menu-item" data-category="pizza" data-vegetarian="false" data-gluten-free="false" data-spicy="true">
+                        <div class="item-image">
+                            <img src="spicy.jpg" alt="Hawaiian Pizza">
+                            <div class="item-badge spicy">Spicy</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Spicy Hawaiian</h3>
+                            <p>Ham, pineapple, jalapeños, and our special spicy sauce</p>
+                            <div class="item-price">$16.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appetizers Category -->
+            <div class="menu-category" id="appetizer">
+                <h2 class="category-title">Appetizers</h2>
+                <div class="items-grid">
+                    <!-- Garlic Bread -->
+                    <div class="menu-item" data-category="appetizer" data-vegetarian="true" data-gluten-free="false" data-spicy="false">
+                        <div class="item-image">
+                            <img src="garlic.jpg" alt="Garlic Bread">
+                            <div class="item-badge vegetarian">Vegetarian</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Garlic Bread</h3>
+                            <p>Freshly baked bread with garlic butter and herbs</p>
+                            <div class="item-price">$5.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Mozzarella Sticks -->
+                    <div class="menu-item" data-category="appetizer" data-vegetarian="true" data-gluten-free="false" data-spicy="false">
+                        <div class="item-image">
+                            <img src="mozarella.jpg" alt="Mozzarella Sticks">
+                            <div class="item-badge vegetarian">Vegetarian</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Mozzarella Sticks</h3>
+                            <p>Breaded mozzarella sticks with marinara sauce</p>
+                            <div class="item-price">$7.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Spicy Wings -->
+                    <div class="menu-item" data-category="appetizer" data-vegetarian="false" data-gluten-free="true" data-spicy="true">
+                        <div class="item-image">
+                            <img src="spicy sticky.jpg" alt="Chicken Wings">
+                            <div class="item-badge spicy">Spicy</div>
+                            <div class="item-badge gluten-free">Gluten-Free</div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Spicy Wings</h3>
+                            <p>Crispy chicken wings with your choice of sauce</p>
+                            <div class="item-price">$9.99</div>
+                            <button class="btn btn-small add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pizza Builder -->
+            <div class="pizza-builder">
+                <h2 class="category-title">Build Your Own Pizza</h2>
+                <div class="builder-container">
+                    <div class="builder-visual">
+                        <div class="pizza-base">
+                            <div class="pizza-toppings"></div>
+                        </div>
+                        <div class="builder-price">Base Price: $10.99</div>
+                    </div>
+                    <div class="builder-options">
+                        <div class="builder-section">
+                            <h3>Crust</h3>
+                            <div class="options-grid">
+                                <div class="option" data-type="crust" data-price="0" data-name="Classic">
+                                    <input type="radio" id="crust-classic" name="crust" checked>
+                                    <label for="crust-classic">Classic</label>
+                                </div>
+                                <div class="option" data-type="crust" data-price="1" data-name="Thin">
+                                    <input type="radio" id="crust-thin" name="crust">
+                                    <label for="crust-thin">Thin (+$1.00)</label>
+                                </div>
+                                <div class="option" data-type="crust" data-price="2" data-name="Stuffed">
+                                    <input type="radio" id="crust-stuffed" name="crust">
+                                    <label for="crust-stuffed">Stuffed (+$2.00)</label>
+                                </div>
+                                <div class="option" data-type="crust" data-price="1.5" data-name="Gluten-Free">
+                                    <input type="radio" id="crust-gluten-free" name="crust">
+                                    <label for="crust-gluten-free">Gluten-Free (+$1.50)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="builder-section">
+                            <h3>Sauce</h3>
+                            <div class="options-grid">
+                                <div class="option" data-type="sauce" data-price="0" data-name="Tomato">
+                                    <input type="radio" id="sauce-tomato" name="sauce" checked>
+                                    <label for="sauce-tomato">Tomato</label>
+                                </div>
+                                <div class="option" data-type="sauce" data-price="0.5" data-name="Pesto">
+                                    <input type="radio" id="sauce-pesto" name="sauce">
+                                    <label for="sauce-pesto">Pesto (+$0.50)</label>
+                                </div>
+                                <div class="option" data-type="sauce" data-price="0.5" data-name="Alfredo">
+                                    <input type="radio" id="sauce-alfredo" name="sauce">
+                                    <label for="sauce-alfredo">Alfredo (+$0.50)</label>
+                                </div>
+                                <div class="option" data-type="sauce" data-price="0.5" data-name="BBQ">
+                                    <input type="radio" id="sauce-bbq" name="sauce">
+                                    <label for="sauce-bbq">BBQ (+$0.50)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="builder-section">
+                            <h3>Cheese</h3>
+                            <div class="options-grid">
+                                <div class="option" data-type="cheese" data-price="0" data-name="Mozzarella">
+                                    <input type="radio" id="cheese-mozzarella" name="cheese" checked>
+                                    <label for="cheese-mozzarella">Mozzarella</label>
+                                </div>
+                                <div class="option" data-type="cheese" data-price="1" data-name="Cheddar">
+                                    <input type="radio" id="cheese-cheddar" name="cheese">
+                                    <label for="cheese-cheddar">Cheddar (+$1.00)</label>
+                                </div>
+                                <div class="option" data-type="cheese" data-price="1.5" data-name="Vegan">
+                                    <input type="radio" id="cheese-vegan" name="cheese">
+                                    <label for="cheese-vegan">Vegan (+$1.50)</label>
+                                </div>
+                                <div class="option" data-type="cheese" data-price="1" data-name="Mixed">
+                                    <input type="radio" id="cheese-mixed" name="cheese">
+                                    <label for="cheese-mixed">Mixed (+$1.00)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="builder-section">
+                            <h3>Toppings ($1.00 each)</h3>
+                            <div class="options-grid">
+                                <div class="option" data-type="topping" data-price="1" data-name="Pepperoni">
+                                    <input type="checkbox" id="topping-pepperoni">
+                                    <label for="topping-pepperoni">Pepperoni</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Mushrooms">
+                                    <input type="checkbox" id="topping-mushrooms">
+                                    <label for="topping-mushrooms">Mushrooms</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Onions">
+                                    <input type="checkbox" id="topping-onions">
+                                    <label for="topping-onions">Onions</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Sausage">
+                                    <input type="checkbox" id="topping-sausage">
+                                    <label for="topping-sausage">Sausage</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Bacon">
+                                    <input type="checkbox" id="topping-bacon">
+                                    <label for="topping-bacon">Bacon</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Olives">
+                                    <input type="checkbox" id="topping-olives">
+                                    <label for="topping-olives">Olives</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Bell Peppers">
+                                    <input type="checkbox" id="topping-bell-peppers">
+                                    <label for="topping-bell-peppers">Bell Peppers</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Pineapple">
+                                    <input type="checkbox" id="topping-pineapple">
+                                    <label for="topping-pineapple">Pineapple</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Jalapeños">
+                                    <input type="checkbox" id="topping-jalapenos">
+                                    <label for="topping-jalapenos">Jalapeños</label>
+                                </div>
+                                <div class="option" data-type="topping" data-price="1" data-name="Spinach">
+                                    <input type="checkbox" id="topping-spinach">
+                                    <label for="topping-spinach">Spinach</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="builder-summary">
+                            <h3>Your Custom Pizza</h3>
+                            <div class="summary-details">
+                                <p><strong>Crust:</strong> <span id="summary-crust">Classic</span></p>
+                                <p><strong>Sauce:</strong> <span id="summary-sauce">Tomato</span></p>
+                                <p><strong>Cheese:</strong> <span id="summary-cheese">Mozzarella</span></p>
+                                <p><strong>Toppings:</strong> <span id="summary-toppings">None</span></p>
+                                <p><strong>Total Price:</strong> $<span id="summary-price">10.99</span></p>
+                            </div>
+                            <button class="btn btn-primary add-to-order">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Slice of Heaven</h3>
+                    <p>Taste the best pizza in town made with love and the finest ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Pizza Street, Foodville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@sliceofheaven.com</li>
+                        <li><i class="fas fa-clock"></i> Open daily 11am-11pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Slice of Heaven. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Menu Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const dietaryFilters = document.querySelectorAll('.dietary-filters input');
+    
+    // Category filtering
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const category = btn.dataset.category;
+            
+            // Show/hide menu categories
+            document.querySelectorAll('.menu-category').forEach(cat => {
+                if (category === 'all' || cat.id === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+            
+            // Apply dietary filters if any are active
+            applyDietaryFilters();
+        });
+    });
+    
+    // Dietary filtering
+    dietaryFilters.forEach(filter => {
+        filter.addEventListener('change', applyDietaryFilters);
+    });
+    
+    function applyDietaryFilters() {
+        const activeFilters = [];
+        dietaryFilters.forEach(filter => {
+            if (filter.checked) {
+                activeFilters.push(filter.id);
+            }
+        });
+        
+        menuItems.forEach(item => {
+            let shouldShow = true;
+            
+            activeFilters.forEach(filter => {
+                if (item.dataset[filter] === 'false') {
+                    shouldShow = false;
+                }
+            });
+            
+            if (shouldShow) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    // Pizza Builder Functionality
+    const pizzaBase = document.querySelector('.pizza-base');
+    const pizzaToppings = document.querySelector('.pizza-toppings');
+    const crustOptions = document.querySelectorAll('[data-type="crust"]');
+    const sauceOptions = document.querySelectorAll('[data-type="sauce"]');
+    const cheeseOptions = document.querySelectorAll('[data-type="cheese"]');
+    const toppingOptions = document.querySelectorAll('[data-type="topping"]');
+    const summaryCrust = document.getElementById('summary-crust');
+    const summarySauce = document.getElementById('summary-sauce');
+    const summaryCheese = document.getElementById('summary-cheese');
+    const summaryToppings = document.getElementById('summary-toppings');
+    const summaryPrice = document.getElementById('summary-price');
+    
+    let basePrice = 10.99;
+    let crustPrice = 0;
+    let saucePrice = 0;
+    let cheesePrice = 0;
+    let toppingsPrice = 0;
+    let selectedToppings = [];
+    
+    // Update pizza visual and summary
+    function updatePizza() {
+        // Update crust visual
+        pizzaBase.style.backgroundColor = getCrustColor(summaryCrust.textContent);
+        
+        // Update toppings visual
+        pizzaToppings.innerHTML = '';
+        selectedToppings.forEach(topping => {
+            const toppingElement = document.createElement('div');
+            toppingElement.className = 'topping';
+            toppingElement.style.backgroundImage = `url(images/${topping.toLowerCase().replace(' ', '-')}.png)`;
+            pizzaToppings.appendChild(toppingElement);
+        });
+        
+        // Update price
+        const totalPrice = basePrice + crustPrice + saucePrice + cheesePrice + toppingsPrice;
+        summaryPrice.textContent = totalPrice.toFixed(2);
+    }
+    
+    // Get crust color based on type
+    function getCrustColor(crustType) {
+        switch(crustType) {
+            case 'Thin': return '#f5e1a4';
+            case 'Stuffed': return '#e6c887';
+            case 'Gluten-Free': return '#d4b67a';
+            default: return '#f5e1a4'; // Classic
+        }
+    }
+    
+    // Crust selection
+    crustOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            if (this.querySelector('input').checked) {
+                summaryCrust.textContent = this.dataset.name;
+                crustPrice = parseFloat(this.dataset.price);
+                updatePizza();
+            }
+        });
+    });
+    
+    // Sauce selection
+    sauceOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            if (this.querySelector('input').checked) {
+                summarySauce.textContent = this.dataset.name;
+                saucePrice = parseFloat(this.dataset.price);
+                updatePizza();
+            }
+        });
+    });
+    
+    // Cheese selection
+    cheeseOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            if (this.querySelector('input').checked) {
+                summaryCheese.textContent = this.dataset.name;
+                cheesePrice = parseFloat(this.dataset.price);
+                updatePizza();
+            }
+        });
+    });
+    
+    // Toppings selection
+    toppingOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            const toppingName = this.dataset.name;
+            const checkbox = this.querySelector('input');
+            
+            if (checkbox.checked) {
+                selectedToppings.push(toppingName);
+                toppingsPrice += parseFloat(this.dataset.price);
+            } else {
+                selectedToppings = selectedToppings.filter(t => t !== toppingName);
+                toppingsPrice -= parseFloat(this.dataset.price);
+            }
+            
+            // Update toppings summary
+            if (selectedToppings.length > 0) {
+                summaryToppings.textContent = selectedToppings.join(', ');
+            } else {
+                summaryToppings.textContent = 'None';
+            }
+            
+            updatePizza();
+        });
+    });
+    
+    // Add to order buttons
+    document.querySelectorAll('.add-to-order').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // In a real implementation, this would add the item to an order cart
+            alert('Item added to your order!');
+        });
+    });
+    
+    // Initialize pizza builder
+    updatePizza();
+});
+    </script>
+</body>
+</html>
